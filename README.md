@@ -1,3 +1,15 @@
+# FaceKube
+
+## Stack
+1. johnpaulada/face-recognition-graphql-server
+2. Kubernetes
+3. Kedge
+4. Reach Router
+5. styled-components
+6. React
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>

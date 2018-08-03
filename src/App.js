@@ -1,19 +1,30 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Router } from "@reach/router"
+import { ApolloProvider } from "react-apollo";
+import ApolloClient from "apollo-boost";
+
+import Home from './pages/Home'
+import AddFace from './pages/AddFace'
+import RecognizeFace from './pages/RecognizeFace'
+
+const {
+  REACT_APP_GRAPHQL_URL
+} = process.env
+
+const client = new ApolloClient({
+  uri: REACT_APP_GRAPHQL_URL
+});
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <ApolloProvider client={client}>
+        <Router>
+          <Home path="/" />
+          <AddFace path="/add-face" />
+          <RecognizeFace path="/recognize-face" />
+        </Router>
+      </ApolloProvider>
     );
   }
 }
