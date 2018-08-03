@@ -4,6 +4,7 @@ deployments:
 - containers:
   - image: johnpaulada/face-recognition-graphql-server
     imagePullPolicy: IfNotPresent
+  replicas: 3
 
 services:
 - name: api

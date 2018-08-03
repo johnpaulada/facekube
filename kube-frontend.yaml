@@ -4,6 +4,7 @@ deployments:
 - containers:
   - image: johnpaulada/facekube
     imagePullPolicy: IfNotPresent
+  replicas: 3
 
 services:
 - name: app
