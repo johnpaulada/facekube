@@ -1,0 +1,12 @@
+name: app
+
+deployments:
+- containers:
+  - image: johnpaulada/facekube
+    imagePullPolicy: IfNotPresent
+
+services:
+- name: app
+  type: LoadBalancer
+  portMappings:
+    - 3000:3000

@@ -1,0 +1,12 @@
+name: api
+
+deployments:
+- containers:
+  - image: johnpaulada/face-recognition-graphql-server
+    imagePullPolicy: IfNotPresent
+
+services:
+- name: api
+  type: LoadBalancer
+  portMappings:
+    - 8000:8000
