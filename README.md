@@ -5,11 +5,12 @@ Facial Recognition App to demo Kubernetes.
 [![forthebadge](https://forthebadge.com/images/badges/gluten-free.svg)](https://forthebadge.com)
 
 ## Instructions
-1. Clone this repo.
-2. Run `kedge generate -f kube-backend.yaml -f kube-frontend.yaml > kube.yaml`.
-3. Run `kubectl apply -f kube.yaml`.
-4. Make sure all pods are ready.
-5. Run `minikube service api && minikube service app`.
+1. Clone this repo and run `cd facekube`.
+2. Start your Kubernetes cluster (via Minikube or something).
+3. Run `kedge generate -f kube-backend.yaml -f kube-frontend.yaml > kube.yaml`.
+4. Run `kubectl apply -f kube.yaml`.
+5. Make sure all pods are ready.
+6. Run `minikube service api && minikube service app`.
 
 ## Stack
 1. johnpaulada/face-recognition-graphql-server
