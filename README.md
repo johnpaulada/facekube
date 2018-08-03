@@ -19,6 +19,9 @@ Facial Recognition App to demo Kubernetes.
 5. styled-components
 6. React
 
+## License
+MIT
+
 ---
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
